@@ -1,10 +1,10 @@
+import { Navbar } from '@/components'
 import './globals.css'
-import { Inter } from 'next/font/google'
 
 
 export const metadata = {
   title: 'Berkah Travel Trans',
-  description: 'Build by love developer',
+  description: 'Build with love by developer',
 }
 
 export default function RootLayout({
@@ -14,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='relative'>{children}</body>
+      <body className='relative'>
+        <Navbar />
+        {children}
+        </body>
     </html>
   )
 }

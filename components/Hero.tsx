@@ -12,7 +12,7 @@ const Hero = () => {
         <p className="hero__subtitle">
           Mau sewa unit? LCGC, MPV, SUV? semua ada dan fasilitas lengkap.
           Hubungi kami! rental mobil Kediri dan sewa mobil Kediri nomor 1.
-          Berkah Travel Trans #MobilBerkahPerjalananTanpaBatas{" "}
+          Berkah Travel Trans <span className="font-bold">#MobilBerkahPerjalananTanpaBatas</span>
         </p>
         <CustomButton
           title="Jelajahi"
