@@ -1,3 +1,20 @@
+export const manufacturers = [
+  'BMW',
+  'Daihatsu',
+  'Ford',
+  'Honda',
+  'Hyundai',
+  'Isuzu',
+  'KIA',
+  'Mercedez',
+  'Mitsubisi',
+  'Nissan',
+  'Suzuki',
+  'Toyota',
+  'Wuling'
+
+]
+
 export const footerLinks = [
   {
     title: "Tentang",
