@@ -12,7 +12,7 @@ const Hero = () => {
         <p className="hero__subtitle">
           Mau sewa unit? LCGC, MPV, SUV? semua ada dan fasilitas lengkap.
           Hubungi kami! rental mobil Kediri dan sewa mobil Kediri nomor 1.
-          Berkah Travel Trans <span className="font-bold">#MobilBerkahPerjalananTanpaBatas</span>
+          Berkah Travel Trans <br/> <span className="font-bold">#MobilBerkah Perjalanan Tanpa Batas</span>
         </p>
         <CustomButton
           title="Jelajahi"
@@ -23,8 +23,8 @@ const Hero = () => {
       <div className="hero__image-container">
         <div className="hero__image">
           <Image src="/hero.png" fill alt="hero" className="object-contain" />
-          <div className="hero__image-overlay"></div>
         </div>
+          <div className="hero__image-overlay"></div>
       </div>
     </div>
   );
