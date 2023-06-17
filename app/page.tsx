@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import { CarCard, CustomFilter, Hero, SearchBar } from '../components'
-import { fetchCars } from '@/utils'
+import { dataCars } from '@/utils'
 
 export default async function Home() {
-  const allCars = await fetchCars();
-  const isDataEmpty = !Array.isArray(allCars) || allCars.length<1 || !allCars;
+  const jsoncar = dataCars;
+  const isDataEmpty = !Array.isArray(jsoncar) || jsoncar.length<1 || !jsoncar;
   return (
     <main className="overflow-hidden">
       <Hero />
@@ -23,7 +23,7 @@ export default async function Home() {
         {!isDataEmpty ? (
           <section>
             <div className='home__cars-wrapper'>
-              {allCars?.map((car) => (
+              {jsoncar.map((car) => (
                 <CarCard car={car} />
               ))}
             </div>
@@ -31,7 +31,6 @@ export default async function Home() {
         ): (
           <div className='home__error-container'>
             <h2 className='text-black text-xl font-bold'>Oops, tidak ada hasil</h2>
-            <p>{allCars?.message}</p>
           </div>
         )}
       </div>
