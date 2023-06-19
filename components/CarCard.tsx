@@ -1,6 +1,5 @@
 'use client'
-import { CarProps, JsonProps } from '@/types'
-import { calculateCarRent } from '@/utils';
+import { JsonProps } from '@/types'
 import Image from 'next/image';
 import React from 'react'
 import { useState } from 'react';
@@ -12,8 +11,7 @@ interface CarCardProps {
 }
 
 const CarCard = ({ car }: CarCardProps) => {
-  const {city_kml, year, make, model, transmission, drive, price, img} = car;
-  const carRent = calculateCarRent(city_kml, year);
+  const {city_kml, model, transmission, drive, price} = car;
   const [isOpen, setIsOpen] =useState(false);
   return (
     <div className="car-card group">

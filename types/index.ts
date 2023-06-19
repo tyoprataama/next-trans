@@ -15,21 +15,6 @@ export interface  SearchBrandProps {
   setBrand: (brand:string) => void;
 }
 
-export interface CarProps {
-  city_kml:number;
-  class:string;
-  combination_mpg:number;
-  cylinders:number;
-  displacement:number;
-  drive:string;
-  fuel_type:string;
-  highway_mpg:number;
-  make:string;
-  model:string;
-  transmission:string;
-  year:number;
-}
-
 export interface JsonProps {
   id: number;
   city_kml:number;
@@ -45,6 +30,7 @@ export interface JsonProps {
   model:string;
   transmission:string;
   year:number;
+  link: string;
   img: string;
   img2: string;
   img3: string

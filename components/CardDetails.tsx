@@ -121,13 +121,13 @@ const CardDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                           {car.transmission === "a" ? "Automatic" : "Manual"}
                         </p>
                         <p className="text-black-100 font-semibold capitalize mt-3">
-                          {car.combination_mpg === "y" ? "Iya" : "Tidak"}
+                          {car.combination_mpg === "y" ? "Ya" : "Tidak"}
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <Link href="">
+                <Link href={car.link}>
                   <CustomButton
                     title="Pesan sekarang"
                     containerStyles="w-full py-[16px] rounded-full bg-primary-blue text-white"
