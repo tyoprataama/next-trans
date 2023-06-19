@@ -12,7 +12,7 @@ interface CarCardProps {
 }
 
 const CarCard = ({ car }: CarCardProps) => {
-  const {city_kml, year, make, model, transmission, drive, price} = car;
+  const {city_kml, year, make, model, transmission, drive, price, img} = car;
   const carRent = calculateCarRent(city_kml, year);
   const [isOpen, setIsOpen] =useState(false);
   return (
@@ -29,7 +29,7 @@ const CarCard = ({ car }: CarCardProps) => {
       </p>
       <div className="relative w-full h-40 my-3 object-contain">
         <Image
-          src="/hero.png"
+          src={car.img}
           alt="car model"
           fill
           priority

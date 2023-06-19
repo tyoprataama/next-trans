@@ -34,8 +34,8 @@ export interface JsonProps {
   id: number;
   city_kml:number;
   price: number;
-  class:string;
-  combination_mpg:number;
+  class:number;
+  combination_mpg:string;
   cylinders:number;
   displacement:number;
   drive:string;
@@ -45,4 +45,7 @@ export interface JsonProps {
   model:string;
   transmission:string;
   year:number;
+  img: string;
+  img2: string;
+  img3: string
 }

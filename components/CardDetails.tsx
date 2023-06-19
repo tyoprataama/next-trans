@@ -55,7 +55,7 @@ const CardDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                 <div className="flex-1 flex flex-col gap-3">
                   <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
                     <Image
-                      src="/hero.png"
+                      src={car.img}
                       alt="car model"
                       fill
                       priority
@@ -65,7 +65,7 @@ const CardDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                   <div className="flex gap-3">
                     <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                       <Image
-                        src="/hero.png"
+                        src={car.img2}
                         alt="car model"
                         fill
                         priority
@@ -74,16 +74,7 @@ const CardDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                     </div>
                     <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                       <Image
-                        src="/hero.png"
-                        alt="car model"
-                        fill
-                        priority
-                        className="object-contain"
-                      />
-                    </div>
-                    <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
-                      <Image
-                        src="/hero.png"
+                        src={car.img3}
                         alt="car model"
                         fill
                         priority
@@ -97,8 +88,9 @@ const CardDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                   <h2 className="font-semibold text-xl capitalize">
                     {car.make} {car.model}
                   </h2>
-                  <div className="mt-3 f;ex f;ex-wrap gap-4">
-                    {Object.entries(car).map(([key, val]) => (
+                  <h4 className="mt-2 text-grey">Spesifikasi:</h4>
+                  <div className="mt-3 flex flex-wrap gap-4">
+                    {/* {Object.entries(car).map(([key, val]) => (
                       <div
                         className="flex justify-between gap-5 w-full text-right"
                         key={key}
@@ -110,7 +102,29 @@ const CardDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                           {val}
                         </p>
                       </div>
-                    ))}
+                    ))} */}
+                    <div className="flex justify-between gap-5 w-full text-left">
+                      <div className="col-span-1">
+                        <h4 className="text-grey">Mesin</h4>
+                        <h4 className="text-grey mt-3">Bahan Bakar</h4>
+                        <h4 className="text-grey mt-3">Transmisi</h4>
+                        <h4 className="text-grey mt-3">Turbo</h4>
+                      </div>
+                      <div className="col-span-1">
+                        <p className="text-black-100 font-semibold">
+                          {car.class} cc
+                        </p>
+                        <p className="text-black-100 font-semibold capitalize mt-3">
+                          {car.fuel_type}
+                        </p>
+                        <p className="text-black-100 font-semibold capitalize mt-3">
+                          {car.transmission === "a" ? "Automatic" : "Manual"}
+                        </p>
+                        <p className="text-black-100 font-semibold capitalize mt-3">
+                          {car.combination_mpg === "y" ? "Iya" : "Tidak"}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <Link href="">
