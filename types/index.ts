@@ -16,7 +16,7 @@ export interface  SearchBrandProps {
 }
 
 export interface CarProps {
-  city_mpg:number;
+  city_kml:number;
   class:string;
   combination_mpg:number;
   cylinders:number;
@@ -32,7 +32,7 @@ export interface CarProps {
 
 export interface JsonProps {
   id: number;
-  city_mpg:number;
+  city_kml:number;
   price: number;
   class:string;
   combination_mpg:number;

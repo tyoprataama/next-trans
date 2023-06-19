@@ -13,8 +13,7 @@
 export const dataCars = 
   [
     {
-      id: 0,
-      city_mpg:12.2,
+      city_kml:12.2,
       price: 550,
       class:"compact car",
       combination_mpg:26,
@@ -29,8 +28,7 @@ export const dataCars =
       year:2017,
     },
     {
-      id: 1,
-      city_mpg:23,
+      city_kml:23,
       price: 350,
       class:"compact car",
       combination_mpg:26,
@@ -45,8 +43,7 @@ export const dataCars =
       year:2022,
     },
     {
-      id: 2,
-      city_mpg:23,
+      city_kml:23,
       price: 450,
       class:"compact car",
       combination_mpg:26,
@@ -61,8 +58,7 @@ export const dataCars =
       year:2016,
     },
     {
-      id: 3,
-      city_mpg:22,
+      city_kml:22,
       price: 550,
       class:"compact car",
       combination_mpg:23,
@@ -75,6 +71,21 @@ export const dataCars =
       model:"hrv",
       transmission:"m",
       year:2021,
+    },
+    {
+      city_kml:12,
+      price: 350,
+      class:"compact car",
+      combination_mpg:23,
+      cylinders:4,
+      displacement:1.7,
+      drive:"fwd",
+      fuel_type:"gas",
+      highway_mpg:32,
+      make:"mitsubisi",
+      model:"xpander",
+      transmission:"a",
+      year:2022,
     }
   ]
 

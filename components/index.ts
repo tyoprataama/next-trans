@@ -5,6 +5,7 @@ import CustomFilter from './CustomFilter';
 import SearchBar from './SearchBar';
 import SearchBrand from './SearchBrand';
 import CarCard from './CarCard';
+import CardDetails from './CardDetails';
 
 export {
   Hero,
@@ -14,4 +15,5 @@ export {
   CustomFilter,
   SearchBrand,
   CarCard,
+  CardDetails,
 };
