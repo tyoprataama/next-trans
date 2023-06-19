@@ -3,6 +3,8 @@ import { JsonProps } from '@/types';
 import { Dialog, Transition } from '@headlessui/react';
 import React, { Fragment } from 'react'
 import Image from 'next/image';
+import Link from 'next/link';
+import CustomButton from './CustomButton';
 
 interface CarDetailsProps {
   isOpen: boolean;
@@ -91,19 +93,32 @@ const CardDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                   </div>
                 </div>
 
-                <div className='flex-1 flex flex-col gap-2'>
-                  <h2 className='font-semibold text-xl capitalize'>
+                <div className="flex-1 flex flex-col gap-2">
+                  <h2 className="font-semibold text-xl capitalize">
                     {car.make} {car.model}
                   </h2>
-                  <div className='mt-3 f;ex f;ex-wrap gap-4'>
+                  <div className="mt-3 f;ex f;ex-wrap gap-4">
                     {Object.entries(car).map(([key, val]) => (
-                      <div className='flex justify-between gap-5 w-full text-right' key={key}>
-                        <h4 className='text-grey capitalize'>{key.split("_").join(' ')}</h4>
-                        <p className='text-black-100 font-semibold'>{val}</p>
+                      <div
+                        className="flex justify-between gap-5 w-full text-right"
+                        key={key}
+                      >
+                        <h4 className="text-grey capitalize">
+                          {key.split("_").join(" ")}
+                        </h4>
+                        <p className="text-black-100 font-semibold capitalize">
+                          {val}
+                        </p>
                       </div>
                     ))}
                   </div>
                 </div>
+                <Link href="">
+                  <CustomButton
+                    title="Pesan sekarang"
+                    containerStyles="w-full py-[16px] rounded-full bg-primary-blue text-white"
+                  />
+                </Link>
               </Dialog.Panel>
             </Transition.Child>
           </div>

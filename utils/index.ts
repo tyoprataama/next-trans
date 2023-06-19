@@ -53,7 +53,7 @@ export const dataCars =
       fuel_type:"gas",
       highway_mpg:31,
       make:"nissan",
-      model:"grand livina",
+      model:"livina",
       transmission:"m",
       year:2016,
     },
