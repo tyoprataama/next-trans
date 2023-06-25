@@ -1,5 +1,6 @@
-import { Footer, Navbar } from '@/components'
-import './globals.css'
+import { Footer, Navbar } from '@/components';
+import './globals.css';
+import Providers from './Providers';
 
 
 export const metadata = {
@@ -13,12 +14,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className='relative'>
-        <Navbar />
-        {children}
-        <Footer />
-        </body>
+    <html lang="en" suppressHydrationWarning>
+      <body className="relative">
+        <Providers>
+          <Navbar />
+          {children}
+          <Footer />
+        </Providers>
+      </body>
     </html>
-  )
+  );
 }

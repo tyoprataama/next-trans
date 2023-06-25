@@ -6,6 +6,7 @@ import SearchBar from './SearchBar';
 import SearchBrand from './SearchBrand';
 import CarCard from './CarCard';
 import CardDetails from './CardDetails';
+import ThemeBtn from './ThemeBtn';
 
 export {
   Hero,
@@ -16,4 +17,5 @@ export {
   SearchBrand,
   CarCard,
   CardDetails,
+  ThemeBtn,
 };

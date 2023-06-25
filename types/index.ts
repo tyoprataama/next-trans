@@ -16,7 +16,6 @@ export interface  SearchBrandProps {
 }
 
 export interface JsonProps {
-  id: number;
   city_kml:number;
   price: number;
   class:number;
