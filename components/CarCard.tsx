@@ -14,13 +14,11 @@ const CarCard = ({ car }: CarCardProps) => {
   const {city_kml, model, transmission, drive, price} = car;
   const [isOpen, setIsOpen] =useState(false);
   return (
-    <div className="car-card group">
+    <div className="car-card group dark:bg-zinc-800">
       <div className="car-card__content">
-        <h2 className="car-card__content-title">
-           {model}
-        </h2>
+        <h2 className="car-card__content-title dark:text-white">{model}</h2>
       </div>
-      <p className="flex mt-6 text-[32px] font-extrabold">
+      <p className="flex mt-6 text-[32px] font-extrabold dark:text-white">
         <span className="self-start text-[14px] font-semibold">Rp</span>
         {price}
         <span className="self-end text-[14px] font-medium">.000/hari</span>
@@ -43,17 +41,17 @@ const CarCard = ({ car }: CarCardProps) => {
               height={20}
               alt="steering wheel"
             />
-            <p className="text-[14px]">
+            <p className="text-[14px] dark:text-white">
               {transmission === "a" ? "Automatic" : "Manual"}
             </p>
           </div>
           <div className="flex flex-col justify-center items-center gap-2">
             <Image src="/tire.svg" width={20} height={20} alt="tire" />
-            <p className="text-[14px]">{drive.toUpperCase()}</p>
+            <p className="text-[14px] dark:text-white">{drive.toUpperCase()}</p>
           </div>
           <div className="flex flex-col justify-center items-center gap-2">
             <Image src="/gas.svg" width={20} height={20} alt="steering wheel" />
-            <p className="text-[14px]">{city_kml} Km/l</p>
+            <p className="text-[14px] dark:text-white">{city_kml} Km/l</p>
           </div>
         </div>
         <div className="car-card__btn-container">

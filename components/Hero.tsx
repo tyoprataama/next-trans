@@ -3,11 +3,37 @@ import React, { useEffect, useState } from "react";
 import CustomButton from "./CustomButton";
 import Image from "next/image";
 import Link from "next/link";
+import { scroller } from "react-scroll";
 
 const Hero = () => {
-   const handleScroll = () => {
-     // Handle scroll event here
-     console.log("Scrolling...");
+   const [offset, setOffset] = useState<number>(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const isMobile: boolean = window.innerWidth <= 768; // Adjust the breakpoint as needed
+      const mobileOffset: number = 1350; // Offset value for mobile devices
+      const desktopOffset: number = 300; // Offset value for desktop devices
+
+      // Set the offset based on the device type
+      setOffset(isMobile ? mobileOffset : desktopOffset);
+    };
+
+    // Call the handleResize function on initial load and window resize
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+   const scrollToElement = () => {
+     scroller.scrollTo("scrollElement", {
+       duration: 800,
+       delay: 0,
+       smooth: "easeInOutQuart",
+       offset: offset,
+     });
    };
 
   return (
@@ -24,7 +50,7 @@ const Hero = () => {
         <CustomButton
           title="Jelajahi"
           containerStyles="bg-primary-blue text-white rounded-full mt-10"
-          handleClick={handleScroll}
+          handleClick={scrollToElement}
         />
 </Link>
       </div>
