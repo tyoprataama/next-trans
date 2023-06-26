@@ -4,8 +4,11 @@ import CustomButton from "./CustomButton";
 import Image from "next/image";
 import Link from "next/link";
 import { scroller } from "react-scroll";
+import { useTheme } from "next-themes";
 
 const Hero = () => {
+  const { resolvedTheme } = useTheme();
+  const logoSrc = resolvedTheme === "dark" ? "/hero.png" : "/hero-light.png";
    const [offset, setOffset] = useState<number>(0);
 
   useEffect(() => {
@@ -53,7 +56,7 @@ const Hero = () => {
       </div>
       <div className="hero__image-container">
         <div className="hero__image">
-          <Image src="/hero.png" fill alt="hero" className="object-contain" />
+          <Image src={logoSrc} fill alt="hero" className="object-contain" />
         </div>
           <div className="hero__image-overlay"></div>
       </div>

@@ -12,7 +12,7 @@ const Testimonials = () => {
       <FontAwesomeIcon
         key={index}
         icon={faStar}
-        style={{ color: "#ffe642", marginRight: "0.25rem" }}
+        style={{ color: "#ffaf24", marginRight: "0.25rem" }}
       />
     ));
     return <>{stars}</>;
@@ -32,7 +32,7 @@ const Testimonials = () => {
             <p className="text-gray-600 dark:text-white">
             <StarIcon rating={testimonial.rating} />
             </p>
-            <p className="text-gray-800 mb-4 dark:text-white">
+            <p className="text-gray-500 mb-4 dark:text-white">
               {testimonial.content}
             </p>
           </div>
