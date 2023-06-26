@@ -124,7 +124,7 @@ const CardDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                 </div>
                 <Link href={car.link}>
                   <CustomButton
-                    title="Pesan sekarang"
+                    title="Cek ketersediaan"
                     containerStyles="w-full py-[16px] rounded-full bg-primary-blue text-white"
                   />
                 </Link>

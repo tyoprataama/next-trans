@@ -2,13 +2,11 @@
 import Image from "next/image";
 import {
   CarCard,
-  CustomFilter,
   Hero,
-  SearchBar,
   Testimonials,
 } from "../components";
 import { dataCars } from "@/utils";
-import { ThemeProvider } from "next-themes";
+import Faq from "@/components/Faq";
 
 export default async function Home() {
   const jsoncar = dataCars;
@@ -17,11 +15,13 @@ export default async function Home() {
     <main className="overflow-hidden">
       <Hero />
       <div className="mt-12 padding-x padding-y max-width" id="discover">
-        <div className="home__text-container">
-          <h1 className="text-4xl font-extrabold dark:text-white">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl dark:text-white">
             Katalog Mobil
-          </h1>
-          <p className="dark:text-white">Cari mobil sesuai kebutuhan Anda</p>
+          </h2>
+          <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600 dark:text-white">
+            Cari mobil sesuai kebutuhan anda
+          </p>
         </div>
 
         {!isDataEmpty ? (
@@ -40,11 +40,9 @@ export default async function Home() {
           </div>
         )}
       </div>
-      <div className="home__text-container px-8">
-        <h1 className="text-4xl font-extrabold dark:text-white">Testimoni</h1>
-        <p className="dark:text-white">Apa kata mereka tentang Berkah Travel Trans?</p>
-      </div>
+     
       <Testimonials />
+      <Faq />
     </main>
   );
 }

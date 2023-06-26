@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import CustomButton from "./CustomButton";
 import Image from "next/image";
-import Link from "next/link";
 import { scroller } from "react-scroll";
 import { useTheme } from "next-themes";
 
@@ -14,7 +13,7 @@ const Hero = () => {
   useEffect(() => {
     const handleResize = () => {
       const isMobile: boolean = window.innerWidth <= 768; // Adjust the breakpoint as needed
-      const mobileOffset: number = 1350; // Offset value for mobile devices
+      const mobileOffset: number = 1400; // Offset value for mobile devices
       const desktopOffset: number = 300; // Offset value for desktop devices
 
       // Set the offset based on the device type
@@ -45,7 +44,7 @@ const Hero = () => {
         <h1 className="hero__title">Cari atau sewa mobil - cepat dan mudah!</h1>
         <p className="hero__subtitle dark:text-white">
           Mau sewa unit? LCGC, MPV, SUV? semua ada dan fasilitas lengkap.
-          Hubungi kami! rental mobil Kediri dan sewa mobil Kediri nomor 1.
+          Hubungi kami! rental mobil <span className="font-bold">Kediri </span> dan sewa mobil Kediri nomor 1.
           Berkah Travel Trans <br/> <span className="font-bold">#MobilBerkah Perjalanan Tanpa Batas</span>
         </p>
         <CustomButton

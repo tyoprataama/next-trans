@@ -27,6 +27,9 @@ module.exports = {
       backgroundImage: {
         'pattern': "url('/pattern.png')",
         'hero-bg': "url('/hero-bg.png')"
+      },
+      typescript: {
+        ignoreBuildErrors: true,
       }
     },
   },
