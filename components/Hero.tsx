@@ -45,14 +45,11 @@ const Hero = () => {
           Hubungi kami! rental mobil Kediri dan sewa mobil Kediri nomor 1.
           Berkah Travel Trans <br/> <span className="font-bold">#MobilBerkah Perjalanan Tanpa Batas</span>
         </p>
-<Link href=''>
-
         <CustomButton
           title="Jelajahi"
           containerStyles="bg-primary-blue text-white rounded-full mt-10"
           handleClick={scrollToElement}
         />
-</Link>
       </div>
       <div className="hero__image-container">
         <div className="hero__image">

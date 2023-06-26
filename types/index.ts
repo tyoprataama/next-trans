@@ -34,3 +34,11 @@ export interface JsonProps {
   img2: string;
   img3: string
 }
+
+export interface Testimonial {
+  id: number;
+  name: string;
+  content: string;
+  city: string;
+  rating: any;
+}

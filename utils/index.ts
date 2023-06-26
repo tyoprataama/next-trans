@@ -153,3 +153,49 @@ export const dataCars =
       img3: '/car-xpander-2.png',
     },
   ]
+
+  export const testimoniData = 
+  [
+    {
+      id: 1,
+      name: 'Kevin Winata',
+      content: 'I absolutely love Tailus! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze.',
+      city: 'Kediri',
+      rating: 5
+    },
+    {
+      id: 2,
+      name: 'Bayu Permadi',
+      content: 'I absolutely love Tailus! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze.',
+      city: 'Kediri',
+      rating: 5
+    },
+    {
+      id: 3,
+      name: 'Farel Susilo',
+      content: 'I absolutely love Tailus! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze.',
+      city: 'Kediri',
+      rating: 4
+    },
+    {
+      id: 4,
+      name: 'Nanda Hamida',
+      content: 'I absolutely love Tailus! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze.',
+      city: 'Kediri',
+      rating: 4
+    },
+    {
+      id: 5,
+      name: 'Tata Sari',
+      content: 'I absolutely love Tailus! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze.',
+      city: 'Kediri',
+      rating: 5
+    },
+    {
+      id: 6,
+      name: 'Suyitno',
+      content: 'I absolutely love Tailus! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze.',
+      city: 'Kediri',
+      rating: 4
+    },
+  ]

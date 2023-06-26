@@ -24,7 +24,7 @@ const ThemeBtn = () => {
         
         <SunIcon className="h-5 w-5 text-orange-300" />
       ) : (
-        <MoonIcon className="h-5 w-5 text-orange-300" />
+        <MoonIcon className="h-5 w-5 text-zinc-800" />
       )}
     </button>
   );
