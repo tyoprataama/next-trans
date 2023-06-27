@@ -104,6 +104,12 @@ const CardDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                         <h4 className="text-grey mt-3 dark:text-white">
                           Turbo
                         </h4>
+                        <h4 className="text-grey mt-3 dark:text-white">
+                          Tahun
+                        </h4>
+                        <h4 className="text-grey mt-3 dark:text-white">
+                          Harga
+                        </h4>
                       </div>
                       <div className="col-span-1">
                         <p className="text-black-100 font-semibold dark:text-white">
@@ -117,6 +123,12 @@ const CardDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                         </p>
                         <p className="text-black-100 font-semibold capitalize mt-3 dark:text-white">
                           : {car.combination_mpg === "y" ? "Ya" : "Tidak"}
+                        </p>
+                        <p className="text-black-100 font-semibold capitalize mt-3 dark:text-white">
+                          : {car.year}
+                        </p>
+                        <p className="text-black-100 font-semibold capitalize mt-3 dark:text-white">
+                          : Rp.{car.price}.000/hari
                         </p>
                       </div>
                     </div>
